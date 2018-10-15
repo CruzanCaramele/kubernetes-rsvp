@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+  labels:
+    applications: mongodb
+spec:
+  ports:
+  - port: 27107
+    protocol: TCP
+  selector:
+    database: applicationdb
